@@ -3,6 +3,8 @@ import 'package:local_warhouse/model/location.dart';
 
 part 'item.g.dart';
 
+final String tableItem = 'item';
+
 @JsonSerializable()
 class Item {
   final int id;

@@ -2,6 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'location.g.dart';
 
+final String tableLocation = 'location';
+
 @JsonSerializable()
 class Location {
   final int id;
