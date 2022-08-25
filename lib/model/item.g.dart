@@ -7,10 +7,10 @@ part of 'item.dart';
 // **************************************************************************
 
 Item _$ItemFromJson(Map<String, dynamic> json) => Item(
-      json['id'] as int,
-      json['name'] as String,
-      Location.fromJson(json['location'] as Map<String, dynamic>),
-      DateTime.parse(json['expiryDate'] as String),
+      id: json['id'] as int?,
+      name: json['name'] as String,
+      location: Location.fromJson(json['location'] as Map<String, dynamic>),
+      expiryDate: DateTime.parse(json['expiryDate'] as String),
     );
 
 Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{

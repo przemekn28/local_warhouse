@@ -11,10 +11,13 @@ class LocationFields {
 
 @JsonSerializable()
 class Location {
-  final int id;
+  final int? id;
   final String name;
 
-  Location(this.id, this.name);
+  Location({this.id, required this.name});
+
+  Location copy({int? id, String? name}) =>
+      Location(id: id ?? this.id, name: name ?? this.name);
 
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);

@@ -7,8 +7,8 @@ part of 'location.dart';
 // **************************************************************************
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
-      json['id'] as int,
-      json['name'] as String,
+      id: json['id'] as int?,
+      name: json['name'] as String,
     );
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{

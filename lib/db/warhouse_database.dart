@@ -33,7 +33,7 @@ class WarhouseDatabase {
 CREATE TABLE $tableCategory (
   ${CategoryFields.id} $idType as $idType,
   ${CategoryFields.name} $textType as $textType,
-  
+  ${CategoryFields.items} null
 )
 ''');
 

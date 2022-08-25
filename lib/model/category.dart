@@ -19,6 +19,16 @@ class Category {
 
   const Category({this.id, required this.name, required this.items});
 
+  Category copy({
+    int? id,
+    String? name,
+    List<Item>? items,
+  }) =>
+      Category(
+          id: id ?? this.id,
+          name: name ?? this.name,
+          items: items ?? this.items);
+
   factory Category.fromJson(Map<String, dynamic> json) =>
       _$CategoryFromJson(json);
   Map<String, Object?> toJson() => _$CategoryToJson(this);
