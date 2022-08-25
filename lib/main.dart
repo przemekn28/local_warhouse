@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:local_warhouse/view/category_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Local warhouse'),
         ),
-        body: Column(),
+        body: CategoryView(),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             // Add your onPressed code here!

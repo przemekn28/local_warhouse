@@ -15,9 +15,9 @@ class CategoryFields {
 class Category {
   final int? id;
   final String name;
-  final List<Item> items;
+  final List<Item>? items;
 
-  const Category({this.id, required this.name, required this.items});
+  const Category({this.id, required this.name, this.items});
 
   Category copy({
     int? id,

@@ -9,13 +9,17 @@ part of 'item.dart';
 Item _$ItemFromJson(Map<String, dynamic> json) => Item(
       id: json['id'] as int?,
       name: json['name'] as String,
-      location: Location.fromJson(json['location'] as Map<String, dynamic>),
-      expiryDate: DateTime.parse(json['expiryDate'] as String),
+      location: json['location'] == null
+          ? null
+          : Location.fromJson(json['location'] as Map<String, dynamic>),
+      expiryDate: json['expiryDate'] == null
+          ? null
+          : DateTime.parse(json['expiryDate'] as String),
     );
 
 Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'location': instance.location,
-      'expiryDate': instance.expiryDate.toIso8601String(),
+      'expiryDate': instance.expiryDate?.toIso8601String(),
     };

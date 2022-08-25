@@ -16,14 +16,10 @@ class ItemFields {
 class Item {
   final int? id;
   final String name;
-  final Location location;
-  final DateTime expiryDate;
+  final Location? location;
+  final DateTime? expiryDate;
 
-  Item(
-      {this.id,
-      required this.name,
-      required this.location,
-      required this.expiryDate});
+  Item({this.id, required this.name, this.location, this.expiryDate});
 
   Item copy(
           {int? id, String? name, Location? location, DateTime? expiryDate}) =>
