@@ -4,6 +4,11 @@ part 'location.g.dart';
 
 final String tableLocation = 'location';
 
+class LocationFields {
+  static final String id = 'id';
+  static final String name = 'name';
+}
+
 @JsonSerializable()
 class Location {
   final int id;
@@ -13,5 +18,5 @@ class Location {
 
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
-  Map<String, dynamic> toJson() => _$LocationToJson(this);
+  Map<String, Object?> toJson() => _$LocationToJson(this);
 }

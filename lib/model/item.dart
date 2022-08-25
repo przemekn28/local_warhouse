@@ -5,6 +5,13 @@ part 'item.g.dart';
 
 final String tableItem = 'item';
 
+class ItemFields {
+  static final String id = 'id';
+  static final String name = 'name';
+  static final String location = 'location';
+  static final String expityDate = 'expiryDate';
+}
+
 @JsonSerializable()
 class Item {
   final int id;
@@ -15,5 +22,5 @@ class Item {
   Item(this.id, this.name, this.location, this.expiryDate);
 
   factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ItemToJson(this);
+  Map<String, Object?> toJson() => _$ItemToJson(this);
 }
